@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qarth,Meereen";
+        const lotrCitiesArray = ["Mordor", "Gondor", "Rohan", "Beleriand", "Mirkwood", "Dead Marshes", "Rhun", "Harad"];
+        const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit";
+
+        var gotarray = gotCitiesCSV.split(',');
+        let newElement = document.createElement("p");
+        newElement.textContent = JSON.stringify(gotarray);
+        document.body.appendChild(newElement);
+        
+        var arrayofwords = bestThing.split(' ');
+        let newElement1 = document.createElement("p");
+        newElement1.textContent = JSON.stringify(arrayofwords);
+        document.body.appendChild(newElement1);
+
+        var comma = gotCitiesCSV.split(',')
+        var semicolon = comma.join('; ');
+        let newElement2 = document.createElement("p");
+        newElement2.textContent = JSON.stringify(semicolon);
+        document.body.appendChild(newElement2);
+
+        var commaseperated1 = lotrCitiesArray.join(', ');
+        let newElement3 = document.createElement("p");
+        newElement3.textContent = JSON.stringify(commaseperated1);
+        document.body.appendChild(newElement3);
+
+        var last5 = lotrCitiesArray.slice(3);
+        let newElement4 = document.createElement("p");
+        newElement4.textContent = JSON.stringify(last5);
+        document.body.appendChild(newElement4);
+        
+        lotrCitiesArray.splice(2, 1);
+        let newElement5 = document.createElement("p");
+        newElement5.textContent = JSON.stringify(lotrCitiesArray);
+        document.body.appendChild(newElement5);
+
+        var booleanevan = bestThing.slice(23, 38);
+        let newElement6 = document.createElement("p");
+        newElement6.textContent = JSON.stringify(booleanevan);
+        document.body.appendChild(newElement6);
+
+        var indexonly = bestThing.indexOf("only");
+        let newElement7 = document.createElement("p");
+        newElement7.textContent = JSON.stringify(indexonly);
+        document.body.appendChild(newElement7);
+
+        var vowelfinder = gotCitiesCSV.split(', ');
+    </script>
+</body>
+
+</html>
