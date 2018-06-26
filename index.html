@@ -18,7 +18,7 @@
         let newElement = document.createElement("p");
         newElement.textContent = JSON.stringify(gotarray);
         document.body.appendChild(newElement);
-        
+
         var arrayofwords = bestThing.split(' ');
         let newElement1 = document.createElement("p");
         newElement1.textContent = JSON.stringify(arrayofwords);
@@ -39,7 +39,7 @@
         let newElement4 = document.createElement("p");
         newElement4.textContent = JSON.stringify(last5);
         document.body.appendChild(newElement4);
-        
+
         lotrCitiesArray.splice(2, 1);
         let newElement5 = document.createElement("p");
         newElement5.textContent = JSON.stringify(lotrCitiesArray);
@@ -55,7 +55,41 @@
         newElement7.textContent = JSON.stringify(indexonly);
         document.body.appendChild(newElement7);
 
-        var vowelfinder = gotCitiesCSV.split(', ');
+        var vowelfinder = gotCitiesCSV.split(',');
+        var para = document.querySelector('p');
+        const allwords = [];
+        for (i = 0; i < vowelfinder.length; i++) {
+            console.log(vowelfinder[i]);
+            if (vowelfinder[i].includes('aa')) {
+                allwords.push(vowelfinder[i]);
+                console.log("Found a");
+            }
+            else if (vowelfinder[i].includes('ee')) {
+                allwords.push(vowelfinder[i]);
+                console.log("Found e");
+            }
+            else if (vowelfinder[i].includes('ii')) {
+                allwords.push(vowelfinder[i]);
+                console.log("Found i");
+            }
+            else if (vowelfinder[i].includes('oo')) {
+                allwords.push(vowelfinder[i]);
+                console.log("Found o");
+            }
+            else if (vowelfinder[i].includes('uu')) {
+                allwords.push(vowelfinder[i]);
+                console.log("Found u");
+            }
+        }
+        para.textContent = allwords;
+        document.body.appendChild(para);
+
+        var numberofletters = lotrCitiesArray.sort(function (a, b){
+            return a.length - b.length
+        });
+        var numberofletters1 = document.createElement("p");
+        numberofletters1.textContent = JSON.stringify(numberofletters);
+        document.body.appendChild(numberofletters1);
     </script>
 </body>
 
